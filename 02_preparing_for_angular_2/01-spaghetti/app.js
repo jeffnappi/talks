@@ -31,8 +31,7 @@ angular.module('app')
 
       $http.get('api/teams.json').then(
         function (response) {
-          var teams = response.data;
-          $scope.teams = teams.data
+          $scope.teams = response.data.results;
         }
       )
     }]);
