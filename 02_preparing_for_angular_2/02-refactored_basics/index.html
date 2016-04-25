@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <meta charset="utf-8"/>
+  <title>AngularJS Spaghetti</title>
+  <script>document.write('<base href="' + document.location + '" />');</script>
+  <script data-require="angular.js@1.5.5"
+          src="https://code.angularjs.org/1.5.5/angular.js"
+          data-semver="1.5.5"></script>
+  <script src="app.js"></script>
+</head>
+
+<body>
+<div ng-controller="Home">
+  <input type="text"
+         ng-model="title"
+         size="80">
+  <div ng-controller="Teams">
+    <h3>{{title}}</h3>
+    <h5>{{$parent.title}}</h5>
+    <ul ng-repeat="team in teams">
+      <li>
+        <a ng-click="deleteTeam($index)">{{team}}</a>
+      </li>
+    </ul>
+    <form>
+      <input type="text"
+             ng-model="newTeam">
+      <button ng-click="addTeam()">Add +</button>
+    </form>
+  </div>
+</div>
+</body>
+
+</html>
