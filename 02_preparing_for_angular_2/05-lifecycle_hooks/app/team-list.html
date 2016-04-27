@@ -1,0 +1,14 @@
+<div>
+  <h5><span ng-if="ctrl.titleUpdated">Updated:</span>{{ctrl.homeTitle}}</h5>
+  <!--<input type="text" ng-model="$ctrl.title" size="50">-->
+  <ul ng-repeat="team in ctrl.teams">
+    <li>
+      <a href="#" ng-click="ctrl.deleteTeam($index)">X</a> {{team}}
+    </li>
+  </ul>
+  <form>
+    <input type="text"
+           ng-model="ctrl.newTeam">
+    <button ng-click="ctrl.addTeam()">Add +</button>
+  </form>
+</div>
