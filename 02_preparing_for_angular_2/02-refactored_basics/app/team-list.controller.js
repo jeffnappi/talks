@@ -4,7 +4,8 @@
 
 (function () {
 
-  angular.module('app')
+  angular
+    .module('app')
     .controller('TeamListController', TeamListController);
 
   TeamListController.$inject = ['$scope', 'TeamService'];

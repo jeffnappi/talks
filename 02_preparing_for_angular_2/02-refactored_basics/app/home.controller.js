@@ -1,6 +1,6 @@
 (function () {
-
-  angular.module('app', [])
+  angular
+    .module('app')
     .controller('HomeController', HomeController);
 
   HomeController.$inject = ['$scope'];

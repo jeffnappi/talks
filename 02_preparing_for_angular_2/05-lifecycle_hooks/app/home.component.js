@@ -1,5 +1,6 @@
 (function () {
-  angular.module('app')
+  angular
+    .module('app')
     .component('home', {
       controller: HomeController,
       templateUrl: 'app/home.html'

@@ -2,7 +2,8 @@
  * MID-REFACTOR CODE EXAMPLE!!! DO NOT USE
  */
 (function () {
-  angular.module('app')
+  angular
+    .module('app')
     .component('teamList', {
       controller: TeamListController,
       controllerAs: 'ctrl',

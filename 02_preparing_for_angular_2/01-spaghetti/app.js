@@ -2,13 +2,15 @@
  * SPAGHETTI CODE EXAMPLE!!! DO NOT USE
  */
 
-angular.module('app', [])
+angular
+  .module('app', [])
   .controller('Home',
     ['$scope', function ($scope) {
       $scope.title = 'Ultimate Team Manager';
     }]);
 
-angular.module('app')
+angular
+  .module('app')
   .controller('Teams',
     ['$scope', '$http', function ($scope, $http) {
       $scope.teams = [];
