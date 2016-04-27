@@ -1,6 +1,9 @@
 (function () {
   angular.module('app')
-    .controller('HomeController', HomeController);
+    .component('home', {
+      controller: HomeController,
+      templateUrl: 'app/home.html'
+    });
 
   function HomeController() {
     var ctrl = this;
