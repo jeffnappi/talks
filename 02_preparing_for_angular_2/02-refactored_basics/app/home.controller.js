@@ -1,8 +1,9 @@
 (function () {
 
   angular.module('app', [])
-    .controller('HomeController',
-      ['$scope', HomeController]);
+    .controller('HomeController', HomeController);
+
+  HomeController.$inject = ['$scope'];
 
   function HomeController($scope) {
     $scope.title = 'Ultimate Team Manager';

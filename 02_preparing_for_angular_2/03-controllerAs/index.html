@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <meta charset="utf-8"/>
+  <title>AngularJS Refactor controllerAs</title>
+  <script>document.write('<base href="' + document.location + '" />');</script>
+  <script data-require="angular.js@1.5.5"
+          src="https://code.angularjs.org/1.5.5/angular.js"
+          data-semver="1.5.5"></script>
+  <script src="app/main.js"></script>
+  <script src="app/home.controller.js"></script>
+  <script src="app/team.service.js"></script>
+  <script src="app/team-list.controller.js"></script>
+</head>
+
+<body>
+<div ng-controller="HomeController as homeCtrl">
+  <input type="text"
+         ng-model="homeCtrl.title"
+         size="80">
+  <div ng-controller="TeamListController as listCtrl">
+    <h5>{{homeCtrl.title}}</h5>
+    <ul ng-repeat="team in listCtrl.teams">
+      <li>
+        <a ng-click="listCtrl.deleteTeam($index)">{{team}}</a>
+      </li>
+    </ul>
+    <form>
+      <input type="text"
+             ng-model="listCtrl.newTeam">
+      <button ng-click="listCtrl.addTeam()">Add +</button>
+    </form>
+  </div>
+</div>
+</body>
+
+</html>
